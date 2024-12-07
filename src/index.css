@@ -1,0 +1,59 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    height: 100%
+  }
+
+}
+
+@layer components {
+  .header {
+    color: #ffcb17;
+    font-family: 'Pokemon Solid', sans-serif;
+    -webkit-text-stroke: 2px #3b5ea7;
+    font-weight: 800;
+    font-size: 70px;
+    letter-spacing: 3px;
+  }
+
+  .gradient-background-animation {
+    background: linear-gradient(90deg, #d89dff, #9900ff);
+  }
+
+
+  .moving-line {
+    position: absolute;
+    top: -10%; /* Start slightly above the container */
+    left: -110%; /* Start slightly off to the left */
+    width: 1000px; /* Line width */
+    height: 0.2px; /* Line height */
+    opacity: 0.3;
+    box-shadow: 0 5px 40px 40px rgba(255, 255, 255, 0.4), 0 -5px 40px 40px rgba(255, 255, 255, 0.4);
+    transform: rotate(130deg);
+    background-color: rgba(255, 255, 255, 0.7); /* Line color */
+    animation: moveLine 5s linear infinite; /* Animation to move the line */
+  }
+
+  @keyframes moveLine {
+    0% {
+      top: -10%; /* Start slightly above the container */
+      left: -110%; /* Start slightly off to the left */
+    }
+    100% {
+      top: 110%; /* End slightly below the container */
+      left: 110%; /* End slightly to the right of the container */
+    }
+  }
+
+}
