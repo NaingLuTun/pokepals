@@ -27,33 +27,108 @@
     letter-spacing: 3px;
   }
 
-  .gradient-background-animation {
-    background: linear-gradient(90deg, #d89dff, #9900ff);
+  .gradient-background-normal {
+    background: linear-gradient(90deg, #cacaca, #9a9c99);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-bug {
+    background: linear-gradient(90deg, #b5d667, #89b71c);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-dark {
+    background: linear-gradient(90deg, #555555, #352f2d);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-dragon {
+    background: linear-gradient(90deg, #b2ace2, #7668e9);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-electric {
+    background: linear-gradient(90deg, #e4d589, #f3ca00);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-fairy {
+    background: linear-gradient(90deg, #f7c3f0, #f385e4);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-fighting {
+    background: linear-gradient(90deg, #f0c199, #cf7223);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-fire {
+    background: linear-gradient(90deg, #e79282, #de2000);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-water {
+    background: linear-gradient(90deg, #85bde0, #2288c6);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-ice {
+    background: linear-gradient(90deg, #9bece3, #4acabb);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite; 
+  }
+  .gradient-background-grass {
+    background: linear-gradient(90deg, #4ac278, #0b9340);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-flying {
+    background: linear-gradient(90deg, #a9c7f0, #6185b5);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-poison {
+    background: linear-gradient(90deg, #e1aff1, #af65c8);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-rock {
+    background: linear-gradient(90deg, #f1deb2, #c9af74);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-ground {
+    background: linear-gradient(90deg, #e5c485, #e5b14e);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-steel {
+    background: linear-gradient(90deg, #e2e2e2, #ababab);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-psychic {
+    background: linear-gradient(90deg, #f1a4ab, #f66471);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
+  }
+  .gradient-background-ghost {
+    background: linear-gradient(90deg, #b6aadd, #5d4b97);
+    background-size: 400% 100%;
+    animation: gradientShift 5s ease-in-out infinite;
   }
 
-
-  .moving-line {
-    position: absolute;
-    top: -10%; /* Start slightly above the container */
-    left: -110%; /* Start slightly off to the left */
-    width: 1000px; /* Line width */
-    height: 0.2px; /* Line height */
-    opacity: 0.3;
-    box-shadow: 0 5px 40px 40px rgba(255, 255, 255, 0.4), 0 -5px 40px 40px rgba(255, 255, 255, 0.4);
-    transform: rotate(130deg);
-    background-color: rgba(255, 255, 255, 0.7); /* Line color */
-    animation: moveLine 5s linear infinite; /* Animation to move the line */
-  }
-
-  @keyframes moveLine {
+  @keyframes gradientShift {
     0% {
-      top: -10%; /* Start slightly above the container */
-      left: -110%; /* Start slightly off to the left */
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
     }
     100% {
-      top: 110%; /* End slightly below the container */
-      left: 110%; /* End slightly to the right of the container */
+      background-position: 0% 50%;
     }
   }
+
 
 }

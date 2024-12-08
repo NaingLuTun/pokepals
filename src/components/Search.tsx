@@ -11,7 +11,7 @@ const Search = () => {
     const dispatch = useDispatch<AppDispatch>()
   
     const handleSearchPokemon = () => {
-        const typedPokemonName = pokemonName.toLocaleLowerCase()
+        const typedPokemonName = pokemonName.toLocaleLowerCase().trim()
         dispatch(searchPokemonAsync(typedPokemonName))
     }
   return (
